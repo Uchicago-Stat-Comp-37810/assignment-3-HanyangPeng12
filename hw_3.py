@@ -13,6 +13,7 @@ import random
 
 def is_divisible(m,n):
 	if(n==0):
+		print("0 can't be divisor")
 		return False
 	if(m%n==0):
 		return True
@@ -24,9 +25,8 @@ def is_divisible(m,n):
 
 print(is_divisible(10, 5))  # This should return True
 print(is_divisible(18, 7))  # This should return False
-print(is_divisible(42, 0))  # What should this return?  False
-#0 can't be divisor
-print(is_divisible(42,-6))  # This should return True
+print(is_divisible(42, 0))  # What should this return?
+print(is_divisible(3,-6))  
 
 
 # ********** Exercise 2 ********** 
@@ -41,9 +41,7 @@ def not_equal(m,n):
 
 #Also we can define like this:
 def not_equal2(m,n):
-	if(m>n):
-		return True
-	elif(m<n):
+	if(m>n or m<n):
 		return True
 	else:
 		return False
@@ -51,11 +49,11 @@ def not_equal2(m,n):
 # Test cases for not_equal
 ##### YOUR CODE HERE #####
 print(not_equal(1.1,2.1)) # This should return True
-print(not_equal(1.101,-1.101)) # This should return True
+print(not_equal('1.101','-1.101')) # This should return True
 print(not_equal(4.5,4.5)) # This should return False
 
 print(not_equal2(1.1,2.1)) # This should return True
-print(not_equal2(1.101,-1.101)) # This should return True
+print(not_equal2('1.101','-1.101')) # This should return True
 print(not_equal2(4.5,4.5)) # This should return False
 
 # ********** Exercise 3 ********** 
